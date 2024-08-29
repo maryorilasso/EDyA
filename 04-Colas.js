@@ -1,36 +1,66 @@
-class filaCajero {
-    constructor(){
-        this.queue = [];
-    
-    }
-    enqueue(persona){
-        this.queue.push(persona);
-        return this.queue;
-    }
-    dequeue(){
-        return this.queue.shift();
-    }
-    peek(){
-        return this.queue[0];
-    }
-    size(){
-        return this.queue.length;
-    }
-    isEmpty(){
-        return this.queue.length === 0;
-    }
-    print(){
-        return this.queue;
+class Person {
+    constructor(name, arrivedTime) {
+        this.name = name;
+        this.arrivedTime = arrivedTime;
     }
 
+   
+    toString() {
+        return `${this.name} arrived at ${this.arrivedTime}`;
+    }
 }
 
-const atmQueue = new filaCajero();
 
-console.log(atmQueue.enqueue( name= 'Alejandra', ATM= '14:00'));
-console.log(atmQueue.enqueue(name ='Alejandro', ATM = '22:00'));
-console.log(atmQueue.enqueue('Mariana', '21:00'));
-console.log(atmQueue.enqueue('Leticia', '22:00'));
+class Queue {
+    constructor() {
+        this.items = [];
+    }
 
-console.log(atmQueue.dequeue());
-console.log(atmQueue.peek());
+    enqueue(element) {
+        this.items.push(element);
+    }
+
+    dequeue() {
+        if (this.isEmpty()) {
+            return "The queue is empty";
+        }
+        return this.items.shift();
+    }
+
+    peek() {
+        if (this.isEmpty()) {
+            return "The queue is empty";
+        }
+        return this.items[0];
+    }
+
+    size() {
+        return this.items.length;
+    }
+
+    print() {
+        console.log(this.items.map(person => person.toString()));
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+}
+
+let atmQueue = new Queue();
+
+
+atmQueue.enqueue(new Person("Juan", "08:00"));
+atmQueue.enqueue(new Person("María", "08:05"));
+atmQueue.enqueue(new Person("Pedro", "08:10"));
+atmQueue.enqueue(new Person("Ana", "08:15"));
+
+console.log("Initial ATM Queue:");
+atmQueue.print();
+
+console.log("Atendiendo a:", atmQueue.dequeue());
+
+console.log("ATM restante:");
+atmQueue.print();
+
+console.log("Siguiente en la fila:", atmQueue.peek());
