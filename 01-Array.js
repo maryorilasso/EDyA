@@ -53,3 +53,27 @@ const vegetables =  ["Berenjena", "Pepino", "Remolacha", "Pimenton"];
 let nuevoArray = vegetables.unshift('Papa', 'Yuca');
 console.log(nuevoArray); // 6
 console.log(vegetables); // ['Papa', 'Yuca', 'Pepino', 'Remolacha', 'Pimenton']
+
+
+function esParImparRegular(numero){
+    if(number %2 === 0){
+        console.log(`${numero} es par`);
+    }else{
+        console.log(`${numero} es impar`);
+    }
+}
+
+esParImpar(5);
+esParImpar(12);
+
+
+function esParImparArrow = numero =>{
+    if (numero % 2 === 0){
+        console.log(`${numero} es par`);
+    }else{
+        console.log(`${numero} es impar`);
+    }
+}
+
+esParImparArrow(5);
+esParImparArrow(12);
