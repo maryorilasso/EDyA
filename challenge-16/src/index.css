@@ -1,0 +1,14 @@
+/* src/index.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 1.1rem;
+}

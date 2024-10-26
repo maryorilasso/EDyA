@@ -1,0 +1,35 @@
+/* src/components/NavComponent.css */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .nav-menu li {
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #ffa500; /* Cambia el color al pasar el mouse */
+  }
+  
+  .active-link {
+    color: #ffa500; /* Color para la ruta activa */
+    font-weight: bold;
+    border-bottom: 2px solid #ffa500; /* Resalta la ruta activa */
+  }
+  
