@@ -1,0 +1,52 @@
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8bbd0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  width: 40px;
+  margin-right: 10px;
+  filter: hue-rotate(300deg); 
+}
+
+.app-name {
+  color: #880e4f; 
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link, .logout-btn {
+  color: #880e4f; 
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-weight: 500;
+}
+
+.nav-link:hover, .logout-btn:hover {
+  background-color: #f48fb1; 
+  border-color: #ec407a; 
+}
+
+.username {
+  color: #ad1457;
+  font-weight: bold;
+  margin-right: 1rem;
+}
